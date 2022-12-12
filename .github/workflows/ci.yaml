@@ -55,13 +55,13 @@ jobs:
                 sources:
                   - cdk/cdk.out/Backend101-CODE.template.json
                 parameters:
-                  amiParameter: AMIBackend101eb
+                  amiParameter: AMIBackend101undergroundquizscene2
                   amiTags:
                     BuiltBy: amigo
                     Recipe: backend-101
                     AmigoStage: PROD
                   templatePath: Backend101-CODE.template.json
-              backend-101-undergroundquizscene:
+              backend-101-undergroundquizscene-2:
                 type: autoscaling
                 sources:
                   - target/scala-2.13/hello-world.jar

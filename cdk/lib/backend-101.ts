@@ -12,7 +12,7 @@ export class Backend101 extends GuStack {
   constructor(scope: App, id: string, props: GuStackProps) {
     super(scope, id, props);
 
-    const name = "backend-101-eb";
+    const name = "backend-101-undergroundquizscene-2";
     const domainName = `${name}.gutools.co.uk`;
     const bucket = "developer-playground-dist";
 
