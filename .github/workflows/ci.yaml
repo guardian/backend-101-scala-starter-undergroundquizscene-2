@@ -40,7 +40,7 @@ jobs:
           npm run synth
       - uses: guardian/actions-riff-raff@v1
         with:
-          app: backend-101-eb
+          app: backend-101-scala-starter-undergroundquizscene-2
           config: |
             stacks:
               - playground
@@ -51,7 +51,7 @@ jobs:
             deployments:
               cloudformation:
                 type: cloud-formation
-                app: backend-101-eb
+                app: backend-101-scala-starter-undergroundquizscene-2
                 sources:
                   - cdk/cdk.out/Backend101-CODE.template.json
                 parameters:
@@ -61,7 +61,7 @@ jobs:
                     Recipe: backend-101
                     AmigoStage: PROD
                   templatePath: Backend101-CODE.template.json
-              backend-101-eb:
+              backend-101-undergroundquizscene:
                 type: autoscaling
                 sources:
                   - target/scala-2.13/hello-world.jar
