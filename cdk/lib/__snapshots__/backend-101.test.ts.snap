@@ -94,7 +94,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
           {
             "Key": "gu:repo",
             "PropagateAtLaunch": true,
-            "Value": "undergroundquizscene/backend-101-scala-starter-undergroundquizscene-2",
+            "Value": "guardian/backend-101-scala-starter-undergroundquizscene-2",
           },
           {
             "Key": "LogKinesisStreamName",
@@ -111,7 +111,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
           {
             "Key": "Stack",
             "PropagateAtLaunch": true,
-            "Value": "deploy",
+            "Value": "playground",
           },
           {
             "Key": "Stage",
@@ -171,8 +171,8 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
         ],
         "UserData": {
           "Fn::Base64": "#!/bin/bash -ev
-    aws s3 cp s3://deploy-tools-dist/deploy/TEST/backend-101-eb/app.service /etc/systemd/system/backend-101-eb.service
-    aws s3 cp s3://deploy-tools-dist/deploy/TEST/backend-101-eb/hello-world.jar /hello-world.jar
+    aws s3 cp s3://developer-playground-dist/playground/TEST/backend-101-eb/app.service /etc/systemd/system/backend-101-eb.service
+    aws s3 cp s3://developer-playground-dist/playground/TEST/backend-101-eb/hello-world.jar /hello-world.jar
     systemctl start backend-101-eb",
         },
       },
@@ -193,7 +193,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
           },
           {
             "Key": "gu:repo",
-            "Value": "undergroundquizscene/backend-101-scala-starter-undergroundquizscene-2",
+            "Value": "guardian/backend-101-scala-starter-undergroundquizscene-2",
           },
           {
             "Key": "Name",
@@ -201,7 +201,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
           },
           {
             "Key": "Stack",
-            "Value": "deploy",
+            "Value": "playground",
           },
           {
             "Key": "Stage",
@@ -254,7 +254,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
                     {
                       "Ref": "DistributionBucketName",
                     },
-                    "/deploy/TEST/backend-101-eb/*",
+                    "/playground/TEST/backend-101-eb/*",
                   ],
                 ],
               },
@@ -294,11 +294,11 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
           },
           {
             "Key": "gu:repo",
-            "Value": "undergroundquizscene/backend-101-scala-starter-undergroundquizscene-2",
+            "Value": "guardian/backend-101-scala-starter-undergroundquizscene-2",
           },
           {
             "Key": "Stack",
-            "Value": "deploy",
+            "Value": "playground",
           },
           {
             "Key": "Stage",
@@ -400,11 +400,11 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
           },
           {
             "Key": "gu:repo",
-            "Value": "undergroundquizscene/backend-101-scala-starter-undergroundquizscene-2",
+            "Value": "guardian/backend-101-scala-starter-undergroundquizscene-2",
           },
           {
             "Key": "Stack",
-            "Value": "deploy",
+            "Value": "playground",
           },
           {
             "Key": "Stage",
@@ -470,11 +470,11 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
           },
           {
             "Key": "gu:repo",
-            "Value": "undergroundquizscene/backend-101-scala-starter-undergroundquizscene-2",
+            "Value": "guardian/backend-101-scala-starter-undergroundquizscene-2",
           },
           {
             "Key": "Stack",
-            "Value": "deploy",
+            "Value": "playground",
           },
           {
             "Key": "Stage",
@@ -508,11 +508,11 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
           },
           {
             "Key": "gu:repo",
-            "Value": "undergroundquizscene/backend-101-scala-starter-undergroundquizscene-2",
+            "Value": "guardian/backend-101-scala-starter-undergroundquizscene-2",
           },
           {
             "Key": "Stack",
-            "Value": "deploy",
+            "Value": "playground",
           },
           {
             "Key": "Stage",
@@ -565,7 +565,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
                     {
                       "Ref": "AWS::AccountId",
                     },
-                    ":parameter/TEST/deploy/backend-101-eb",
+                    ":parameter/TEST/playground/backend-101-eb",
                   ],
                 ],
               },
@@ -588,7 +588,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
                     {
                       "Ref": "AWS::AccountId",
                     },
-                    ":parameter/TEST/deploy/backend-101-eb/*",
+                    ":parameter/TEST/playground/backend-101-eb/*",
                   ],
                 ],
               },
@@ -661,11 +661,11 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
           },
           {
             "Key": "gu:repo",
-            "Value": "undergroundquizscene/backend-101-scala-starter-undergroundquizscene-2",
+            "Value": "guardian/backend-101-scala-starter-undergroundquizscene-2",
           },
           {
             "Key": "Stack",
-            "Value": "deploy",
+            "Value": "playground",
           },
           {
             "Key": "Stage",
@@ -716,11 +716,11 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
           },
           {
             "Key": "gu:repo",
-            "Value": "undergroundquizscene/backend-101-scala-starter-undergroundquizscene-2",
+            "Value": "guardian/backend-101-scala-starter-undergroundquizscene-2",
           },
           {
             "Key": "Stack",
-            "Value": "deploy",
+            "Value": "playground",
           },
           {
             "Key": "Stage",

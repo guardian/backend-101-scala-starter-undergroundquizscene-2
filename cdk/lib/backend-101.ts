@@ -14,7 +14,7 @@ export class Backend101 extends GuStack {
 
     const name = "backend-101-eb";
     const domainName = `${name}.gutools.co.uk`;
-    const bucket = "deploy-tools-dist";
+    const bucket = "developer-playground-dist";
 
     const keyPrefix = `${this.stack}/${this.stage}/${name}`;
 
