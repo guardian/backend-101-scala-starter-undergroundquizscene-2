@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Backend101 stack matches the snapshot 1`] = `
+exports[`The Backend101ScalaStarterUndergroundquizscene2 stack matches the snapshot 1`] = `
 {
   "Metadata": {
     "gu:cdk:constructs": [
@@ -29,19 +29,19 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
     "gu:cdk:version": "TEST",
   },
   "Outputs": {
-    "LoadBalancerBackend101undergroundquizscene2DnsName": {
-      "Description": "DNS entry for LoadBalancerBackend101undergroundquizscene2",
+    "LoadBalancerBackend101scalastarterundergroundquizscene2DnsName": {
+      "Description": "DNS entry for LoadBalancerBackend101scalastarterundergroundquizscene2",
       "Value": {
         "Fn::GetAtt": [
-          "LoadBalancerBackend101undergroundquizscene2C4F3921A",
+          "LoadBalancerBackend101scalastarterundergroundquizscene23CAD9587",
           "DNSName",
         ],
       },
     },
   },
   "Parameters": {
-    "AMIBackend101undergroundquizscene2": {
-      "Description": "Amazon Machine Image ID for the app backend-101-undergroundquizscene-2. Use this in conjunction with AMIgo to keep AMIs up to date.",
+    "AMIBackend101scalastarterundergroundquizscene2": {
+      "Description": "Amazon Machine Image ID for the app backend-101-scala-starter-undergroundquizscene-2. Use this in conjunction with AMIgo to keep AMIs up to date.",
       "Type": "AWS::EC2::Image::Id",
     },
     "DistributionBucketName": {
@@ -59,24 +59,24 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
       "Description": "Virtual Private Cloud to run EC2 instances within. Should NOT be the account default VPC.",
       "Type": "AWS::SSM::Parameter::Value<AWS::EC2::VPC::Id>",
     },
-    "backend101undergroundquizscene2PrivateSubnets": {
+    "backend101scalastarterundergroundquizscene2PrivateSubnets": {
       "Default": "/account/vpc/primary/subnets/private",
       "Description": "A list of private subnets",
       "Type": "AWS::SSM::Parameter::Value<List<AWS::EC2::Subnet::Id>>",
     },
-    "backend101undergroundquizscene2PublicSubnets": {
+    "backend101scalastarterundergroundquizscene2PublicSubnets": {
       "Default": "/account/vpc/primary/subnets/public",
       "Description": "A list of public subnets",
       "Type": "AWS::SSM::Parameter::Value<List<AWS::EC2::Subnet::Id>>",
     },
   },
   "Resources": {
-    "AutoScalingGroupBackend101undergroundquizscene2ASG10B36066": {
+    "AutoScalingGroupBackend101scalastarterundergroundquizscene2ASG4E00D126": {
       "Properties": {
         "HealthCheckGracePeriod": 120,
         "HealthCheckType": "ELB",
         "LaunchConfigurationName": {
-          "Ref": "AutoScalingGroupBackend101undergroundquizscene2LaunchConfigC39E1B87",
+          "Ref": "AutoScalingGroupBackend101scalastarterundergroundquizscene2LaunchConfig99B3FE91",
         },
         "MaxSize": "2",
         "MinSize": "1",
@@ -84,7 +84,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
           {
             "Key": "App",
             "PropagateAtLaunch": true,
-            "Value": "backend-101-undergroundquizscene-2",
+            "Value": "backend-101-scala-starter-undergroundquizscene-2",
           },
           {
             "Key": "gu:cdk:version",
@@ -106,7 +106,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
           {
             "Key": "Name",
             "PropagateAtLaunch": true,
-            "Value": "Backend101/AutoScalingGroupBackend101undergroundquizscene2",
+            "Value": "Backend101ScalaStarterUndergroundquizscene2/AutoScalingGroupBackend101scalastarterundergroundquizscene2",
           },
           {
             "Key": "Stack",
@@ -121,35 +121,35 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
         ],
         "TargetGroupARNs": [
           {
-            "Ref": "TargetGroupBackend101undergroundquizscene2F6DF8396",
+            "Ref": "TargetGroupBackend101scalastarterundergroundquizscene23C5729CB",
           },
         ],
         "VPCZoneIdentifier": {
-          "Ref": "backend101undergroundquizscene2PrivateSubnets",
+          "Ref": "backend101scalastarterundergroundquizscene2PrivateSubnets",
         },
       },
       "Type": "AWS::AutoScaling::AutoScalingGroup",
     },
-    "AutoScalingGroupBackend101undergroundquizscene2InstanceProfile33633826": {
+    "AutoScalingGroupBackend101scalastarterundergroundquizscene2InstanceProfile23484E50": {
       "Properties": {
         "Roles": [
           {
-            "Ref": "InstanceRoleBackend101undergroundquizscene24814E150",
+            "Ref": "InstanceRoleBackend101scalastarterundergroundquizscene24BA12F28",
           },
         ],
       },
       "Type": "AWS::IAM::InstanceProfile",
     },
-    "AutoScalingGroupBackend101undergroundquizscene2LaunchConfigC39E1B87": {
+    "AutoScalingGroupBackend101scalastarterundergroundquizscene2LaunchConfig99B3FE91": {
       "DependsOn": [
-        "InstanceRoleBackend101undergroundquizscene24814E150",
+        "InstanceRoleBackend101scalastarterundergroundquizscene24BA12F28",
       ],
       "Properties": {
         "IamInstanceProfile": {
-          "Ref": "AutoScalingGroupBackend101undergroundquizscene2InstanceProfile33633826",
+          "Ref": "AutoScalingGroupBackend101scalastarterundergroundquizscene2InstanceProfile23484E50",
         },
         "ImageId": {
-          "Ref": "AMIBackend101undergroundquizscene2",
+          "Ref": "AMIBackend101scalastarterundergroundquizscene2",
         },
         "InstanceType": "t4g.small",
         "MetadataOptions": {
@@ -158,7 +158,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
         "SecurityGroups": [
           {
             "Fn::GetAtt": [
-              "GuHttpsEgressSecurityGroupBackend101undergroundquizscene2F9E29D28",
+              "GuHttpsEgressSecurityGroupBackend101scalastarterundergroundquizscene24F3CC598",
               "GroupId",
             ],
           },
@@ -171,21 +171,22 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
         ],
         "UserData": {
           "Fn::Base64": "#!/bin/bash -ev
-    aws s3 cp s3://developer-playground-dist/playground/TEST/backend-101-undergroundquizscene-2/app.service /etc/systemd/system/backend-101-undergroundquizscene-2.service
-    aws s3 cp s3://developer-playground-dist/playground/TEST/backend-101-undergroundquizscene-2/hello-world.jar /hello-world.jar
-    systemctl start backend-101-undergroundquizscene-2",
+aws s3 cp s3://developer-playground-dist/playground/TEST/backend-101-scala-starter-undergroundquizscene-2/app.service /etc/systemd/system/backend-101-scala-starter-undergroundquizscene-2.service
+aws s3 cp s3://developer-playground-dist/playground/TEST/backend-101-scala-starter-undergroundquizscene-2/hello-world.jar /hello-world.jar
+systemctl start backend-101-scala-starter-undergroundquizscene-2
+",
         },
       },
       "Type": "AWS::AutoScaling::LaunchConfiguration",
     },
-    "CertificateBackend101undergroundquizscene2D6AE8A23": {
+    "CertificateBackend101scalastarterundergroundquizscene2D90BD4D8": {
       "DeletionPolicy": "Retain",
       "Properties": {
-        "DomainName": "backend-101-undergroundquizscene-2.gutools.co.uk",
+        "DomainName": "backend-101-scala-starter-undergroundquizscene-2.gutools.co.uk",
         "Tags": [
           {
             "Key": "App",
-            "Value": "backend-101-undergroundquizscene-2",
+            "Value": "backend-101-scala-starter-undergroundquizscene-2",
           },
           {
             "Key": "gu:cdk:version",
@@ -197,7 +198,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
           },
           {
             "Key": "Name",
-            "Value": "Backend101/CertificateBackend101undergroundquizscene2",
+            "Value": "Backend101ScalaStarterUndergroundquizscene2/CertificateBackend101scalastarterundergroundquizscene2",
           },
           {
             "Key": "Stack",
@@ -233,13 +234,13 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
         "PolicyName": "describe-ec2-policy",
         "Roles": [
           {
-            "Ref": "InstanceRoleBackend101undergroundquizscene24814E150",
+            "Ref": "InstanceRoleBackend101scalastarterundergroundquizscene24BA12F28",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
-    "GetDistributablePolicyBackend101undergroundquizscene2BDE698AF": {
+    "GetDistributablePolicyBackend101scalastarterundergroundquizscene2A54080F3": {
       "Properties": {
         "PolicyDocument": {
           "Statement": [
@@ -254,7 +255,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
                     {
                       "Ref": "DistributionBucketName",
                     },
-                    "/playground/TEST/backend-101-undergroundquizscene-2/*",
+                    "/playground/TEST/backend-101-scala-starter-undergroundquizscene-2/*",
                   ],
                 ],
               },
@@ -262,16 +263,16 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
           ],
           "Version": "2012-10-17",
         },
-        "PolicyName": "GetDistributablePolicyBackend101undergroundquizscene2BDE698AF",
+        "PolicyName": "GetDistributablePolicyBackend101scalastarterundergroundquizscene2A54080F3",
         "Roles": [
           {
-            "Ref": "InstanceRoleBackend101undergroundquizscene24814E150",
+            "Ref": "InstanceRoleBackend101scalastarterundergroundquizscene24BA12F28",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
-    "GuHttpsEgressSecurityGroupBackend101undergroundquizscene2F9E29D28": {
+    "GuHttpsEgressSecurityGroupBackend101scalastarterundergroundquizscene24F3CC598": {
       "Properties": {
         "GroupDescription": "Allow all outbound HTTPS traffic",
         "SecurityGroupEgress": [
@@ -286,7 +287,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
         "Tags": [
           {
             "Key": "App",
-            "Value": "backend-101-undergroundquizscene-2",
+            "Value": "backend-101-scala-starter-undergroundquizscene-2",
           },
           {
             "Key": "gu:cdk:version",
@@ -311,20 +312,20 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
       },
       "Type": "AWS::EC2::SecurityGroup",
     },
-    "GuHttpsEgressSecurityGroupBackend101undergroundquizscene2fromBackend101LoadBalancerBackend101undergroundquizscene2SecurityGroup29C66FAA900058743C93": {
+    "GuHttpsEgressSecurityGroupBackend101scalastarterundergroundquizscene2fromBackend101ScalaStarterUndergroundquizscene2LoadBalancerBackend101scalastarterundergroundquizscene2SecurityGroup5750CCD89000E7536D1E": {
       "Properties": {
         "Description": "Load balancer to target",
         "FromPort": 9000,
         "GroupId": {
           "Fn::GetAtt": [
-            "GuHttpsEgressSecurityGroupBackend101undergroundquizscene2F9E29D28",
+            "GuHttpsEgressSecurityGroupBackend101scalastarterundergroundquizscene24F3CC598",
             "GroupId",
           ],
         },
         "IpProtocol": "tcp",
         "SourceSecurityGroupId": {
           "Fn::GetAtt": [
-            "LoadBalancerBackend101undergroundquizscene2SecurityGroupDCED0C75",
+            "LoadBalancerBackend101scalastarterundergroundquizscene2SecurityGroup54B6E696",
             "GroupId",
           ],
         },
@@ -368,13 +369,13 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
         "PolicyName": "GuLogShippingPolicy981BFE5A",
         "Roles": [
           {
-            "Ref": "InstanceRoleBackend101undergroundquizscene24814E150",
+            "Ref": "InstanceRoleBackend101scalastarterundergroundquizscene24BA12F28",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
-    "InstanceRoleBackend101undergroundquizscene24814E150": {
+    "InstanceRoleBackend101scalastarterundergroundquizscene24BA12F28": {
       "Properties": {
         "AssumeRolePolicyDocument": {
           "Statement": [
@@ -392,7 +393,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
         "Tags": [
           {
             "Key": "App",
-            "Value": "backend-101-undergroundquizscene-2",
+            "Value": "backend-101-scala-starter-undergroundquizscene-2",
           },
           {
             "Key": "gu:cdk:version",
@@ -414,32 +415,32 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
       },
       "Type": "AWS::IAM::Role",
     },
-    "ListenerBackend101undergroundquizscene22B569C29": {
+    "ListenerBackend101scalastarterundergroundquizscene238E054C7": {
       "Properties": {
         "Certificates": [
           {
             "CertificateArn": {
-              "Ref": "CertificateBackend101undergroundquizscene2D6AE8A23",
+              "Ref": "CertificateBackend101scalastarterundergroundquizscene2D90BD4D8",
             },
           },
         ],
         "DefaultActions": [
           {
             "TargetGroupArn": {
-              "Ref": "TargetGroupBackend101undergroundquizscene2F6DF8396",
+              "Ref": "TargetGroupBackend101scalastarterundergroundquizscene23C5729CB",
             },
             "Type": "forward",
           },
         ],
         "LoadBalancerArn": {
-          "Ref": "LoadBalancerBackend101undergroundquizscene2C4F3921A",
+          "Ref": "LoadBalancerBackend101scalastarterundergroundquizscene23CAD9587",
         },
         "Port": 443,
         "Protocol": "HTTPS",
       },
       "Type": "AWS::ElasticLoadBalancingV2::Listener",
     },
-    "LoadBalancerBackend101undergroundquizscene2C4F3921A": {
+    "LoadBalancerBackend101scalastarterundergroundquizscene23CAD9587": {
       "Properties": {
         "LoadBalancerAttributes": [
           {
@@ -451,18 +452,18 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
         "SecurityGroups": [
           {
             "Fn::GetAtt": [
-              "LoadBalancerBackend101undergroundquizscene2SecurityGroupDCED0C75",
+              "LoadBalancerBackend101scalastarterundergroundquizscene2SecurityGroup54B6E696",
               "GroupId",
             ],
           },
         ],
         "Subnets": {
-          "Ref": "backend101undergroundquizscene2PublicSubnets",
+          "Ref": "backend101scalastarterundergroundquizscene2PublicSubnets",
         },
         "Tags": [
           {
             "Key": "App",
-            "Value": "backend-101-undergroundquizscene-2",
+            "Value": "backend-101-scala-starter-undergroundquizscene-2",
           },
           {
             "Key": "gu:cdk:version",
@@ -485,9 +486,9 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
       },
       "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
     },
-    "LoadBalancerBackend101undergroundquizscene2SecurityGroupDCED0C75": {
+    "LoadBalancerBackend101scalastarterundergroundquizscene2SecurityGroup54B6E696": {
       "Properties": {
-        "GroupDescription": "Automatically created Security Group for ELB Backend101LoadBalancerBackend101undergroundquizscene26E5494A7",
+        "GroupDescription": "Automatically created Security Group for ELB Backend101ScalaStarterUndergroundquizscene2LoadBalancerBackend101scalastarterundergroundquizscene2D177DFCC",
         "SecurityGroupIngress": [
           {
             "CidrIp": "0.0.0.0/0",
@@ -500,7 +501,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
         "Tags": [
           {
             "Key": "App",
-            "Value": "backend-101-undergroundquizscene-2",
+            "Value": "backend-101-scala-starter-undergroundquizscene-2",
           },
           {
             "Key": "gu:cdk:version",
@@ -525,19 +526,19 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
       },
       "Type": "AWS::EC2::SecurityGroup",
     },
-    "LoadBalancerBackend101undergroundquizscene2SecurityGrouptoBackend101GuHttpsEgressSecurityGroupBackend101undergroundquizscene26AB21304900095B63A92": {
+    "LoadBalancerBackend101scalastarterundergroundquizscene2SecurityGrouptoBackend101ScalaStarterUndergroundquizscene2GuHttpsEgressSecurityGroupBackend101scalastarterundergroundquizscene205308C779000DB481FE3": {
       "Properties": {
         "Description": "Load balancer to target",
         "DestinationSecurityGroupId": {
           "Fn::GetAtt": [
-            "GuHttpsEgressSecurityGroupBackend101undergroundquizscene2F9E29D28",
+            "GuHttpsEgressSecurityGroupBackend101scalastarterundergroundquizscene24F3CC598",
             "GroupId",
           ],
         },
         "FromPort": 9000,
         "GroupId": {
           "Fn::GetAtt": [
-            "LoadBalancerBackend101undergroundquizscene2SecurityGroupDCED0C75",
+            "LoadBalancerBackend101scalastarterundergroundquizscene2SecurityGroup54B6E696",
             "GroupId",
           ],
         },
@@ -546,7 +547,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
       },
       "Type": "AWS::EC2::SecurityGroupEgress",
     },
-    "ParameterStoreReadBackend101undergroundquizscene24D4DF0A7": {
+    "ParameterStoreReadBackend101scalastarterundergroundquizscene2ADEE0BED": {
       "Properties": {
         "PolicyDocument": {
           "Statement": [
@@ -565,7 +566,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
                     {
                       "Ref": "AWS::AccountId",
                     },
-                    ":parameter/TEST/playground/backend-101-undergroundquizscene-2",
+                    ":parameter/TEST/playground/backend-101-scala-starter-undergroundquizscene-2",
                   ],
                 ],
               },
@@ -588,7 +589,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
                     {
                       "Ref": "AWS::AccountId",
                     },
-                    ":parameter/TEST/playground/backend-101-undergroundquizscene-2/*",
+                    ":parameter/TEST/playground/backend-101-scala-starter-undergroundquizscene-2/*",
                   ],
                 ],
               },
@@ -599,7 +600,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
         "PolicyName": "parameter-store-read-policy",
         "Roles": [
           {
-            "Ref": "InstanceRoleBackend101undergroundquizscene24814E150",
+            "Ref": "InstanceRoleBackend101scalastarterundergroundquizscene24BA12F28",
           },
         ],
       },
@@ -635,13 +636,13 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
         "PolicyName": "ssm-run-command-policy",
         "Roles": [
           {
-            "Ref": "InstanceRoleBackend101undergroundquizscene24814E150",
+            "Ref": "InstanceRoleBackend101scalastarterundergroundquizscene24BA12F28",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
-    "TargetGroupBackend101undergroundquizscene2F6DF8396": {
+    "TargetGroupBackend101scalastarterundergroundquizscene23C5729CB": {
       "Properties": {
         "HealthCheckIntervalSeconds": 10,
         "HealthCheckPath": "/healthcheck",
@@ -653,7 +654,7 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
         "Tags": [
           {
             "Key": "App",
-            "Value": "backend-101-undergroundquizscene-2",
+            "Value": "backend-101-scala-starter-undergroundquizscene-2",
           },
           {
             "Key": "gu:cdk:version",
@@ -735,12 +736,12 @@ exports[`The Backend101 stack matches the snapshot 1`] = `
     },
     "dns": {
       "Properties": {
-        "Name": "backend-101-undergroundquizscene-2.gutools.co.uk",
+        "Name": "backend-101-scala-starter-undergroundquizscene-2.gutools.co.uk",
         "RecordType": "CNAME",
         "ResourceRecords": [
           {
             "Fn::GetAtt": [
-              "LoadBalancerBackend101undergroundquizscene2C4F3921A",
+              "LoadBalancerBackend101scalastarterundergroundquizscene23CAD9587",
               "DNSName",
             ],
           },

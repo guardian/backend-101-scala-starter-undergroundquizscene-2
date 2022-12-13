@@ -53,15 +53,15 @@ jobs:
                 type: cloud-formation
                 app: backend-101-scala-starter-undergroundquizscene-2
                 sources:
-                  - cdk/cdk.out/Backend101-CODE.template.json
+                  - cdk/cdk.out/Backend101ScalaStarterUndergroundquizscene2-CODE.template.json
                 parameters:
-                  amiParameter: AMIBackend101undergroundquizscene2
+                  amiParameter: AMIBackend101scalastarterundergroundquizscene2
                   amiTags:
                     BuiltBy: amigo
                     Recipe: backend-101
                     AmigoStage: PROD
-                  templatePath: Backend101-CODE.template.json
-              backend-101-undergroundquizscene-2:
+                  templatePath: Backend101ScalaStarterUndergroundquizscene2-CODE.template.json
+              backend-101-scala-starter-undergroundquizscene-2:
                 type: autoscaling
                 sources:
                   - target/scala-2.13/hello-world.jar
